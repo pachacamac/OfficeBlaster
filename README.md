@@ -24,5 +24,8 @@ Fire up OfficeBlaster and unite those computers to form an instant awesome sound
 7. continue from point 3. with your new song
 8. <b>dance and be happy! :D</b>
 
+<h2>What's missing?</h2>
+* Synchronization. As for now OfficeBlaster relies on a fast network and more or less homogenous computers to reach a acceptable level of synchronous playback. Suggestions are appreciated!
+
 <h2>Notes</h2>
 <i>example music 'Gordon_Tarpley_Sample.mp3' is from http://musopen.org/music/piece/924 (public domain)</i>
