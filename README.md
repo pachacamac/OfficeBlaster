@@ -16,13 +16,13 @@ Fire up OfficeBlaster and unite those computers to form an instant awesome sound
 
 <h2>Usage</h2>
 1. edit the office_blaster.rb and enter the collaborating machine addresses
-2. start the office_blaster server on these machines by running ./office_blaster run
-3. from any machine start the playback by running ./office_blaster play Gordon_Tarpley_Sample.mp3
-4. stop the playback by running ./office_blaster stop
-5. upload some more music with ./office_blaster upload ~/Music/awesome_new_song.mp3
-6. make sure every machine got it like this ./office_blaster list
+2. start the office_blaster server on these machines by running `./office_blaster run`
+3. from any machine start the playback by running `./office_blaster play Gordon_Tarpley_Sample.mp3`
+4. stop the playback by running `./office_blaster stop`
+5. upload some more music with `./office_blaster upload ~/Music/awesome_new_song.mp3`
+6. make sure every machine got it like this `./office_blaster list`
 7. continue from point 3. with your new song
-8. dance and be happy! :D
+8. <b>dance and be happy! :D</b>
 
 <h2>Notes</h2>
 <i>example music 'Gordon_Tarpley_Sample.mp3' is from http://musopen.org/music/piece/924 (public domain)</i>
