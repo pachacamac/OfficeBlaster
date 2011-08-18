@@ -4,8 +4,10 @@ require 'drb'
 
 MUSIC_PATH = File.expand_path(File.join(File.dirname(__FILE__),'music'))
 SERVERS = [
-  'druby://0.0.0.0:13123',
-  'druby://e:13123',
+  'druby://0.0.0.0:13123', #This is your machine
+  'druby://a:13123',       #..some
+  'druby://b:13123',       #..other
+  'druby://c:13123',       #..machines
 ]
 
 class OfficeBlasterServer
@@ -25,6 +27,7 @@ class OfficeBlasterServer
   end
 
   def upload name, content
+    puts "receiving '#{name}'"
     path = File.expand_path(File.join(MUSIC_PATH, name))
     File.open(path,'w'){ |f| f.write content }
   end
