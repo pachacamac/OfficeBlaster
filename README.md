@@ -15,7 +15,7 @@ Fire up OfficeBlaster and unite those computers to form an instant awesome sound
 * package <b>mpg321</b> (e.g. apt-get install mpg321) <i>but can work with other players too</i>
 
 <h2>Usage</h2>
-1. edit the office_blaster.rb and enter the collaborating machine addresses
+1. edit the office_blaster.rb and enter the collaborating machine addresses (this is gonna be automated soon)
 2. start the office_blaster server on these machines by running `./office_blaster run`
 3. from any machine start the playback by running `./office_blaster play Gordon_Tarpley_Sample.mp3`
 4. stop the playback by running `./office_blaster stop`
