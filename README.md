@@ -9,7 +9,7 @@ you want to have a spontaneous party but you don't have a cool sound system.
 
 <h3>Solution:</h3>
 
-Fire up OfficeBlaster and unite those computers to form an instant awesome sound system! 
+Fire up OfficeBlaster and unite those computers to form an instant awesome sound army!
 
 <h2>Requirements</h2>
 * package <b>mpg321</b> (e.g. apt-get install mpg321) <i>but can work with other players too</i>
@@ -25,7 +25,7 @@ Fire up OfficeBlaster and unite those computers to form an instant awesome sound
 8. <b>dance and be happy! :D</b>
 
 <h2>What's missing?</h2>
-* Synchronization. As for now OfficeBlaster relies on a fast network and more or less homogenous computers to reach a acceptable level of synchronous playback. Suggestions are appreciated!
+* Synchronization. As for now OfficeBlaster relies on a fast network and more or less homogenous computers to reach an acceptable level of synchronous playback. Suggestions are appreciated!
 
 <h2>Notes</h2>
 <i>example music 'Gordon_Tarpley_Sample.mp3' is from http://musopen.org/music/piece/924 (public domain)</i>
