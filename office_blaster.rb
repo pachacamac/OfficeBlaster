@@ -16,13 +16,19 @@ class OfficeBlasterServer
     file = File.expand_path(File.join(MUSIC_PATH, file))
     puts "playing #{file}"
     return false unless File.exists? file
-    @pid = fork{ exec 'mpg123','-T' ,'-q', file }
+    @pid = fork do
+      if RUBY_PLATFORM =~ /darwin/
+        exec 'afplay', file
+      else
+        exec 'mpg123','-T' ,'-q', file
+      end
+    end
   end
 
   def stop
     return unless @pid
     puts "stopping"
-    Process.kill 'TERM', @pid 
+    Process.kill 'TERM', @pid
     @pid = nil
   end
 
@@ -31,7 +37,7 @@ class OfficeBlasterServer
     path = File.expand_path(File.join(MUSIC_PATH, name))
     File.open(path,'w'){ |f| f.write content }
   end
-  
+
   def list
     puts "listing"
     Dir.entries(MUSIC_PATH).reject{|e|e.start_with? '.'}.sort
@@ -50,7 +56,7 @@ class OfficeBlasterClient
         puts $!
         @@servers[server] = nil
       end
-    end 
+    end
     responses
   end
 end
@@ -59,8 +65,12 @@ case ARGV[0]
   when 'r', 'run'
     DRb.start_service SERVERS.first, OfficeBlasterServer.new
     puts "Server running at #{DRb.uri}"
-    trap("INT") { DRb.stop_service }
-    DRb.thread.join
+    begin
+      DRb.thread.join
+    rescue Interrupt
+    ensure
+      DRb.stop_service
+    end
   when 'p', 'play'
     OfficeBlasterClient.play ARGV[1]
   when 's', 'stop'
